@@ -68,3 +68,7 @@ button {
 button:hover{
   color: #0088a9;
 }
+
+img{
+  width: auto;
+}

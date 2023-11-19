@@ -9,7 +9,7 @@ export default function NavBar() {
 </Link>
 <nav>
 <ul className="nav_links">
-<li><a href ="/mission"> Mission</a> </li>
+<li> <a href ="/mission"> Mission</a> </li>
 <li> <Link to ="/about"> About </Link> </li>
 </ul>
 </nav>
