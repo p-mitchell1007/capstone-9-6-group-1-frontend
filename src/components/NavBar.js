@@ -13,8 +13,8 @@ export default function NavBar() {
 <li> <a href ="/about"> About </a> </li>
 <li> <a href ="/mission"> Mission</a> </li>
 <li> <a href ="/contact"> Contact</a></li>
-<li style ={{float:"right"}}> <a  href="/login"> Login</a> </li>
 <li style ={{float:"right"}}> <a href ="/signup"> Sign Up</a> </li>
+<li style ={{float:"right"}}> <a  href="/login"> Login</a> </li>
 </ul>
 
 

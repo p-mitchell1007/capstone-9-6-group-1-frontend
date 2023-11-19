@@ -4,7 +4,7 @@
 function Mission (){
     return (
         <div> 
-            <h6>Our Mission</h6>
+            <h6>Our Missions</h6>
         </div>
     )
 }
