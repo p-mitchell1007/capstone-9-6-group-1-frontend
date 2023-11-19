@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+     font-size: 16px; 
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.submit-button {
+    padding: 9px 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3 s ease 0s;
+    margin: 10px;
+    padding-left: auto;
+    padding-right: auto;
+  
+  }
