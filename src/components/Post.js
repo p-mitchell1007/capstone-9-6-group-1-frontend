@@ -1,10 +1,11 @@
-
+import './Post.css'
 function Post (props) {
 
   return (
     <div className="post">
-      <h3>{props.post.title}</h3>
-      <p>{props.post.content}</p>
+      <h4>User Id: {props.post.user_id}</h4>
+      <h3>Title: {props.post.title}</h3>
+      <p>Content: {props.post.content}</p>
     </div>
   )
 }
