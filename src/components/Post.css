@@ -1,0 +1,6 @@
+.post {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}

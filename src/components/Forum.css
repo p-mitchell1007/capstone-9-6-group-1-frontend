@@ -1,0 +1,49 @@
+.forum-header {
+  font-size: 1.9em;
+  background-color: rgb(215, 193, 140);
+  margin: 1px 0 ;
+  padding: 20px 0 20px 0;
+}
+.forum {
+  align-content: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content: flex-start;
+  justify-content:left;
+}
+.posts { 
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+post-filter-item:hover {
+  font-size: larger;
+  
+}
+
+.post-index, .post-filter, .post-detail{
+  background-color: rgb(215, 193, 140);
+}
+
+.logo2 {
+  width: 102%;
+  opacity: 0.1;
+  position: absolute;
+  width: 105%;
+  opacity: 0.08;
+}
+
+.post-index {
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+post-index * {
+  margin: 0;
+  padding: 0;
+}

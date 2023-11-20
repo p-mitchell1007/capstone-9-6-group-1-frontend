@@ -5,14 +5,13 @@ import NavBar from "./NavBar"
 export default function Home() {
   return (
     <div className='home-page'>
-      <h1>Home Page</h1>
-      <ul>
-        <li>Home Page Item1</li>
-        <li>Home Page Item2</li>
-        <li>Home Page Item3</li>
-        <li></li>
-        <li></li>
-      </ul>
+      <h1>Reflections</h1>
+      <div>User Profile</div>
+      <div>Forum Posts</div>
+      <div>Articles</div>
+      <div></div>
+      <div></div>
+      
     </div>
   )
 }

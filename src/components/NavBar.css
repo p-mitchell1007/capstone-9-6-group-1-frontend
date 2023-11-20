@@ -11,6 +11,7 @@ ul, li, a, button {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 
  .logo {
     position: absolute;
@@ -36,8 +37,35 @@ ul, li, a, button {
   padding: 0;
   overflow: hidden;
   background-color: #FCC59B;
+=======
+.logo {
+  /* position: absolute;
+  top: 0px;
+  left: 0px; */
+  cursor: pointer;
+  float:inline-start;
+  float:left;
+  height: 80px;
+  width: 9cqh;
+  margin: 0 5px;
+  object-fit: scale-down;
+  width: 80px;
+  
+>>>>>>> 5ad89841 (Progress with forum, edit-post, postShow)
 }
 
+.nav_bar {
+  align-items: flex-end;
+  background-color: rgb(236, 107, 38); 
+  display: flex;
+  direction: row;
+  height: 80px;
+  justify-content: space-between;
+  margin-top: 42px;
+  padding: 30px, 10%;
+  /* padding-left: 150px; */
+  
+}
 
 li {
   float: left;
@@ -55,12 +83,19 @@ li a {
 
 
 .nav_links{
+  display: flex;
+  flex-direction: row;
   list-style: none;
+  padding-left: 30px;
 }
 
 .nav_links li{
   display: inline-block;
   padding: 0px 20px;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 5ad89841 (Progress with forum, edit-post, postShow)
 }
 
 
@@ -81,12 +116,31 @@ button {
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.3 s ease 0s;
-
+  
 }
 button:hover{
   color: #0088a9;
 }
+<<<<<<< HEAD
 
 img{
   width: auto;
 }
+=======
+.logo {
+    position: absolute;
+    top: 47px;
+    left: 0px;
+    height: 70px;
+    width: 90px;
+    cursor: pointer;
+    margin-right: 40px;
+    object-fit: cover;
+    /* float:left; */
+  }
+
+.nav_links:nth-child(2) {
+  margin-left: 70px;
+}
+
+>>>>>>> 5ad89841 (Progress with forum, edit-post, postShow)
