@@ -1,6 +1,6 @@
 
 function Post (props) {
-  export default Post;
+
   return (
     <div className="post">
       <form action="submit" id="contact-form">
@@ -28,3 +28,5 @@ function Post (props) {
     </div>
   )
 }
+
+export default Edit-post;

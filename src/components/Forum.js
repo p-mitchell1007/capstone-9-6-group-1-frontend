@@ -4,6 +4,7 @@ import PostIndex from "./post-index";
 import { useState, useEffect } from "react";
 import Logo2 from "../assets/logo2.png"
 import './Forum.css'
+import { Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
@@ -20,25 +21,40 @@ export default function Forum () {
 
   return (
     <div className='forum'>
+      <div>
         <h1 className='forum-header'>Forum</h1>
         <img className = "logo2 nav-item"src ={Logo2} alt='logo image'/>
-      <div className='post-index'>
-        <h4>Post Index</h4>
-        {posts.map((post, index) => {
-            return <PostIndex key={index} post={post} />; 
-          })
-        }
       </div>
-      <ul className='post-filter'>
-        <li className='post-filter-item, all-posts'>All Posts</li>
-        <li className='post-filter-item friends-posts'>Friends</li>
-        <li className='post-filter-item, my-posts'>My Posts</li>
-      </ul>
-      <div className="post-detail">
-          {posts.map((post, index) => {
-          return <Post key={index} post={post} />; 
-        })
-      }
+      <div className="main-content">
+        <div className="aside">
+          <div className='post-index'>
+            <h4>Post Index</h4>
+            <ul className="post-index-filter">
+              <li className='label'>Select:</li>
+              <li className="post-filter-item all-posts">All Posts</li>
+              <li className="post-filter-item friends-posts">Friends</li>
+              <li className="post-filter-item my-posts">My Posts</li>
+            </ul>
+            {posts.map((post, index) => {
+              return <PostIndex key={index} post={post} />; 
+            })
+          }
+          </div>
+        </div>
+        <div>
+          <div className="post-detail">
+            <ul className="post-actions">
+              <li className='label'>Select:</li>
+              <li className="post-actions-item all-posts">view</li>
+              <li className="post-actions-item friends-posts">New</li>
+              <li className="post-actions-item my-posts">Delete</li>
+            </ul>
+              {posts.map((post, index) => {
+              return <Post key={index} post={post} />; 
+            })
+          }
+          </div>
+        </div>
       </div>
     </div>
   )

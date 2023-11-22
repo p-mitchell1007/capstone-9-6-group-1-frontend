@@ -3,8 +3,9 @@ function PostIndex (props) {
 
   return (
     <div className="post-index">
-      <p>User Id: {props.post.user_id}</p>
-      <p>Title: {props.post.title}</p>
+      <ul>
+      <li>{props.post.user_id} {props.post.title} </li>
+      </ul>
     </div>
   )
 }
