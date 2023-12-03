@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
 <div className="nav_bar">
 <Link to={`/`}>
-<img className = "logo" src ={Logo}/> 
+{<img className="logo" src={Logo} alt="Logo" />}
 </Link>
 <nav>
 <ul className="nav_links">

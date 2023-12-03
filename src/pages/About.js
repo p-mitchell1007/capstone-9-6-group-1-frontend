@@ -13,25 +13,38 @@ function About (){
                 and other related issues that come with having a family. It also provides users with therapists 
                 to work with for effectively dealing with postpartum issues.
 
-               
-                <section className="dev"> 
-                <ul > 
-                <h1>Developers:🧑‍💻</h1>
-                    <div className="blanca">  
-                    <img src={Blanca}/>
-                    <a href="https://www.github.com/winterbelle"><strong>Blanca Altamirano</strong></a>
-                    </div>
-                   
-                    <img src={Monir} />
-                    <a href="https://github.com/monir9h"><strong>Monir Hossen</strong></a>
-                    <img src={Raymond}/>
-                    <a href="https://github.com/monir9h"><strong>Raymond Johnson</strong></a>
-                    <img src={Phillip} />
-                    <a href="https://github.com/p-mitchell1007"><strong>Phillip Mitchell</strong></a>
-                </ul>
-                </section>
-                
+                <section className="dev">
+                    <h1>Developers:🧑‍💻</h1>
+                        <ul>
+                            <div className="blanca">
+                                <img src={Blanca} alt="Blanca's Avatar" />
+                                    <a href="https://www.github.com/winterbelle">
+                                            <strong>Blanca Altamirano</strong>
+                                    </a>
+                            </div>
 
+                            <div>
+                                <img src={Monir} alt="Monir's Avatar" />
+                                    <a href="https://github.com/monir9h">
+                                            <strong>Monir Hossen</strong>
+                                    </a>
+                            </div>
+
+                            <div>
+                                <img src={Raymond} alt="Raymond's Avatar" />
+                                    <a href="https://github.com/raymondjohnson">
+                                            <strong>Raymond Johnson</strong>
+                                    </a>
+                            </div>
+
+                            <div>
+                                <img src={Phillip} alt="Phillip's Avatar" />
+                                    <a href="https://github.com/p-mitchell1007">
+                                            <strong>Phillip Mitchell</strong>
+                                    </a>
+                            </div>
+                        </ul>
+                </section>
             </p>
         </div>
     )
