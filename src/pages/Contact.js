@@ -1,5 +1,3 @@
-
-
 import "./Contact.css"
 import {useRef} from "react";
 import emailjs from '@emailjs/browser';
@@ -42,3 +40,4 @@ function Contact (){
 }
 
 export default Contact;
+
