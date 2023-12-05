@@ -1,0 +1,28 @@
+.post {
+  align-items: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.post-detail-img img{
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0;
+  margin-right: 5px;
+  width: 150px;
+  z-index: 1;
+}
+.post-detail-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.post-detail-content:first-child,
+.post-detail-content:nth-child(2),
+.post-detail-content:nth-child(3) {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
