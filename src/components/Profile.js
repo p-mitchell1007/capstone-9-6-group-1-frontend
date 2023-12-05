@@ -10,14 +10,17 @@ import { Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
 
-export default function Forum () {
+export default function Profile () {
   // const [posts, setPosts] = useState([]);
-  const [userPw, setUserPw] = useState([])
+  const [userPw, setUserPw] = useState(['abc222'])
+  const [userProfile, setUserProfile] = useState([])
+  
 
   useEffect(() => {
     axios
-      .get(`${API}/profile`)
-      .then((response) => setPosts(response.data))
+      .get(`${API}/profile/`)
+      // .then((response) => setUserProfile(response.data))
+      .then((response) => console.log(response.data))
       .catch((e) => console.error("catch", e));
   }, []);
 

@@ -1,5 +1,6 @@
 
 function PostIndex (props) {
+  
 
   return (
     <div className="post-index">
