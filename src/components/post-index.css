@@ -1,7 +1,7 @@
 .post-index-item {
   color: black;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 11px;
   z-index: 2;
 }
 .post-index-item:hover {
@@ -9,7 +9,24 @@
   color: rgb(73, 59, 59);
   cursor: pointer;
 }
-.profile-img{
-  width: 30px;
+.profile-img img{
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0;
+  width: 15px;
   z-index: 1;
+}
+.profile-img img:hover{
+  cursor:pointer;
+  border: 1px solid gray;
+}
+
+.post-index {
+  display:flex;
+  flex-direction: column;
+  font-size: 7px;
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+  margin-left: 0;
 }

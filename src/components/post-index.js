@@ -7,7 +7,7 @@ function PostIndex (props) {
   return (
     <div>
       <span className='profile-img'>
-        <defaultMale />
+        <img src={defaultFemale} alt="default male image" />
       </span>
       <span className="post-index-item">{props.post.user_id} {props.post.title} </span>
     </div>
