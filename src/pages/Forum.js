@@ -3,15 +3,18 @@ import axios from "axios";
 import Post from '../components/Post';
 import PostIndex from "../components/post-index";
 import { useState, useEffect } from "react";
-import Logo2 from "../assets/logo2.png"
 import './Forum.css'
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+
+// Logo2 is being used as the background image on the Forum page
+import Logo2 from "../assets/logo2.png";
 
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
 
 export default function Forum () {
   const [posts, setPosts] = useState([]);
+  // const [genderIcon, setGenderIcon] = useState([]);
 
   useEffect(() => {
     axios
@@ -28,7 +31,7 @@ export default function Forum () {
       </div>
       <div className="main-content">
         <div className="aside">
-          <div className='post-index'>
+          <div className='post-index-container'>
             <h4>Post Index</h4>
             <ul className="post-index-filter">
               <li className='label'>Select:</li>
@@ -38,23 +41,25 @@ export default function Forum () {
             </ul>
             <ul className="post-index">
               {posts.map((post, index) => {
-                return <PostIndex key={index} post={post} />; 
-              })}
+                return < PostIndex key={index} post={post} />; })
+              }
             </ul>
           </div>
         </div>
         <div>
           <div className="post-detail">
+              <h4>Post Detail</h4>
             <ul className="post-actions">
               <li className='label'>Select:</li>
               <li className="post-actions-item all-posts">view</li>
               <li className="post-actions-item friends-posts">New</li>
               <li className="post-actions-item my-posts">Delete</li>
             </ul>
+            <div>
               {posts.map((post, index) => {
-              return <Post key={index} post={post} />; 
-            })
-          }
+              return <Post key={index} post={post} />;  })
+              }
+            </div>
           </div>
         </div>
       </div>
