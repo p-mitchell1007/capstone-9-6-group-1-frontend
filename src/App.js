@@ -9,6 +9,7 @@ import Articles from "./pages/Articles"
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import Forum from "./pages/Forum"
+import Home from './pages/Home';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <main>
         <Routes>
+          <Route path="/" element ={<Home />} />
           <Route path="/articles" element ={<Articles />} />
           <Route path="/contact" element ={<Contact />} />
           <Route path="/about" element ={<About />} />
