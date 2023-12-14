@@ -68,19 +68,19 @@
     font-family: 'Inria Serif', serif;
 }
 
-.posts {
+.trending-posts {
     /* border: 3px solid purple; */
     display: grid;
     grid-template-columns: 400px 400px;
     column-gap: 25%;
 }
 
-.post {
+.trending-post {
     border-bottom: 1px solid black;
     text-align: left;
 }
 
-.post h4 {
+.trending-post h4 {
     font-family: Hammersmith One;
     font-size: 20px;
     /* border: 1px solid black; */
@@ -88,7 +88,7 @@
     margin-left: 5px;
 }
 
-.post p {
+.trending-post p {
     /* border: 1px solid grey; */
     font-size: 14px;
     font-family: Inika;
@@ -97,21 +97,21 @@
     margin-left: 5px;
 }
 
-.post:first-child {
+.trending-post:first-child {
     margin-left: 51px;
     /* margin-top: 40px; */
 }
 
-.post:nth-child(3) {
+.trending-post:nth-child(3) {
     margin-left: 51px;
 }
 
-.post:last-child {
+.trending-post:last-child {
     margin-right: 30px;
     margin-left: 10px;
 }
 
-.post:nth-child(2) {
+.trending-post:nth-child(2) {
     margin-right: 30px;
     margin-left: 10px;
 }

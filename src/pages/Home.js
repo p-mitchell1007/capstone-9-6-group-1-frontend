@@ -59,9 +59,9 @@ export default function Home () {
                 </div>
                 <div className="trending">
                     <h2><span className="trend-title">Trending</span> <span className="posts-title">Posts</span></h2>
-                    <div className="posts">
+                    <div className="trending-posts">
                         {posts.map((post) => (
-                            <div key={post.id} className="post">
+                            <div key={post.id} className="-trending-post">
                             <h4>{post.title}</h4>
                             <p>{post.post_made}</p>
                             <p>{post.content}</p>
