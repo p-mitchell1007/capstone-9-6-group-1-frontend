@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css'
 import Logo from "../assets/logo.png"
 
-export default function NavBar() {
+function NavBar() {
   return (
 <div className="nav_bar">
 
@@ -22,3 +22,5 @@ export default function NavBar() {
   </nav>
 </div>  );
 }
+
+export default NavBar;

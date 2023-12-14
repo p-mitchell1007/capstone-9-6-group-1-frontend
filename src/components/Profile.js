@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
 
-export default function Profile () {
+ function Profile () {
   // const [posts, setPosts] = useState([]);
   const [userPw, setUserPw] = useState(['abc222'])
   const [userProfile, setUserProfile] = useState([])
@@ -64,3 +64,4 @@ export default function Profile () {
     </div>
   )
 }
+ export default Profile;

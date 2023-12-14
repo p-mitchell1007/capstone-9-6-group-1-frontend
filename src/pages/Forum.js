@@ -10,7 +10,7 @@ import './Forum.css'
 import Logo2 from "../assets/logo2.png";
 
 const API = process.env.REACT_APP_API_URL;
-const PORT = process.env.PORT
+// const PORT = process.env.PORT
 
 export default function Forum () {
   const [posts, setPosts] = useState([]);
@@ -27,7 +27,7 @@ export default function Forum () {
     <div className='forum'>
       <div>
         <h1 className='forum-header'>Forum</h1>
-        <img className = "logo2 nav-item"src ={Logo2} alt='logo image'/>
+        <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/>
       </div>
       <div className="main-content">
         <div className="aside">
