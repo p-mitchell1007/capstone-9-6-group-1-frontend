@@ -18,7 +18,7 @@ export default function Profile () {
 
   useEffect(() => {
     axios
-      .get(`${API}/profile/`)
+      .get(`${API}/profile/1`)
       // .then((response) => setUserProfile(response.data))
       .then((response) => console.log(response.data))
       .catch((e) => console.error("catch", e));

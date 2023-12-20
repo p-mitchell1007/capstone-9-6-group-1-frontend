@@ -5,7 +5,7 @@ import defaultFemale from "../assets/default-female.png"
 function PostIndex (props) {
 
   return (
-    <div>
+    <div className="post-index">
       <span className='profile-img'>
         <img src={defaultFemale} alt="default male image" />
       </span>

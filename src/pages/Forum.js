@@ -4,10 +4,9 @@ import Post from '../components/Post';
 import PostIndex from "../components/post-index";
 import { useState, useEffect } from "react";
 import './Forum.css'
-//import { Link } from "react-router-dom";
 
 // Logo2 is being used as the background image on the Forum page
-import Logo2 from "../assets/logo2.png";
+import Logo2 from "../assets/logo4.png";
 
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
@@ -29,7 +28,7 @@ export default function Forum () {
         <h1 className='forum-header'>Forum</h1>
         <img className = "logo2 nav-item"src ={Logo2} alt='logo image'/>
       </div>
-      <div className="main-content">
+      <div className="forum-content">
         <div className="aside">
           <div className='post-index-container'>
             <h4>Post Index</h4>
@@ -39,7 +38,7 @@ export default function Forum () {
               <li className="post-filter-item friends-posts">Friends</li>
               <li className="post-filter-item my-posts">My Posts</li>
             </ul>
-            <ul className="post-index">
+            <ul className="post-index-element">
               {posts.map((post, index) => {
                 return < PostIndex key={index} post={post} />; })
               }
@@ -48,10 +47,10 @@ export default function Forum () {
         </div>
         <div>
           <div className="post-detail">
-              <h4>Post Detail</h4>
+              <h3>Post Detail</h3>
             <ul className="post-actions">
               <li className='label'>Select:</li>
-              <li className="post-actions-item all-posts">view</li>
+              <li className="post-actions-item all-posts">View</li>
               <li className="post-actions-item friends-posts">New</li>
               <li className="post-actions-item my-posts">Delete</li>
             </ul>

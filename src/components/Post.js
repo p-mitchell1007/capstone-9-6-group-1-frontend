@@ -11,7 +11,7 @@ function Post (props) {
         <img src={defaultFemale} alt="default male image" />
       </span>
       <span className="post-detail-content">
-        <h4>User Id: {props.post.user_id}</h4>
+        <h4>User: {props.post.user_id}</h4>
         <h3>Title: {props.post.title}</h3>
         <p>Content: {props.post.content}</p>
       </span>

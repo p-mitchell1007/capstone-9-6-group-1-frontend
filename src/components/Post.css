@@ -4,13 +4,17 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-.post-detail-img img{
-  border: 1px solid white;
+div .post-detail-img img{
+  border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 0;
   margin-right: 5px;
-  width: 150px;
-  z-index: 1;
+  width: 90px;
+  z-index: 7;
+}
+div .post-detail-img img:hover{
+  cursor: pointer;
+  transition: width 150px 2s;
 }
 .post-detail-content {
   display: flex;
