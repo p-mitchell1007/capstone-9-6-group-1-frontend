@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './App.css';
-import NavBar from "./components/NavBar"
-import Contact from "./pages/Contact"
-import About from "./pages/About"
-import Mission from "./pages/Mission"
-import Articles from "./pages/Articles"
-import Login from "./pages/Login"
-import SignUp from "./pages/SignUp"
-import Forum from "./pages/Forum"
+import NavBar from "./components/NavBar.js";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
+import Mission from "./Pages/Mission.js";
+import Articles from "./Pages/Articles.js"
+import Login from "./Pages/Login.js"
+import SignUp from "./Pages/SignUp.js"
+import Forum from "./Pages/Forum.js"
+import Home from './Pages/Home.js';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <main>
         <Routes>
+          <Route path="/" element ={<Home />} />
           <Route path="/articles" element ={<Articles />} />
           <Route path="/contact" element ={<Contact />} />
           <Route path="/about" element ={<About />} />

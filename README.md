@@ -4,11 +4,13 @@ An application that allows expecting/current parents and professional counselors
 
 Group 1
 
-Raymond Johnson
-Michelle Harley
-Blanca
-Monir Hossen
-Phillip Mitchell
+| Raymond Johnson 
+
+| Blanca 
+
+| Monir Hossen 
+
+| Phillip Mitchell
 
 ### `npm start`
 
