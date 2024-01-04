@@ -28,8 +28,8 @@ export default function Forum () {
   return (
     <div className='forum'>
       <div>
-        <h1 className='forum-header'>Forum</h1>
-        <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/>
+        {/* <h1 className='forum-header'>Forum</h1> */}
+        {/* <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/> */}
       </div>
       <div className="forum-content">
         <div className="aside">
