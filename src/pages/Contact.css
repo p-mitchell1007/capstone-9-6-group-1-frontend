@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 * {
     font-family: "Montserrat", sans-serif;
@@ -24,4 +24,60 @@
     padding-right: auto;
     background-color: rgb(236, 107, 38); 
   
-  }
+  } */
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 12px; /* Increased margin for better spacing */
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.submit-button {
+    padding: 15px 25px; /* Increased padding for better spacing */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #FF8C42;
+    color: white;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #E36506;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+}

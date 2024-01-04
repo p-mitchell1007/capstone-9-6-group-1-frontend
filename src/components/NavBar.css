@@ -1,94 +1,62 @@
- 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
- 
 
+/* Updated Styles for a Modern and Compact Navigation Bar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-ul, li, a, button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color:black;
-  text-decoration: none;
+body {
+    margin: 0;
 }
-
-
- .logo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100px;
-    width: 100px;
-    cursor: pointer;
-  }
-
-
-.nav_bar ul {
-  list-style-type: none;
-  margin-left: 100px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FCC59B;
-}
-
 .nav_bar {
-  align-items: flex-end;
-  background-color: rgb(236, 107, 38); 
+  background-color: #FF8C42; /* Adjusted orange color */
   display: flex;
-  direction: row;
-  height: 80px;
   justify-content: space-between;
-  padding: 30px, 10%;
-  /* padding-left: 150px; */
-  
-}
-
-li {
-  float: left;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
-li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.logo {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
 }
 
-
-
-
-.nav_links{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding-left: 30px;
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.nav_links li{
-  display: inline-block;
-  padding: 0px 20px;
+.nav_links li {
+    display: inline-block;
 }
 
+.nav_links a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
 
-.nav_links a{
-  transition: all 0.3 s ease 0s;
+.nav_links a:hover {
+    color: #0088a9;
 }
-.nav_links li a:hover{
-  color: #0088a9;
-}
+
 
 button {
-  padding: 9px 25px;
+  padding: 8px 15px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3 s ease 0s;
-  
-}
-button:hover{
-  color: #0088a9;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
 }
 
-img{
-  width: auto;
+
+button:hover {
+    color: #0088a9;
 }
