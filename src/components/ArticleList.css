@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: rgb(215, 193, 140);
+    /* background-color: rgb(215, 193, 140); */
     color: #333; 
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 .article-list-container {
     max-width: 800px;
     margin: 30px auto; 
-    background-color: rgb(215, 193, 140); 
+    background-color: #FCC59B; 
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -39,10 +39,14 @@ li {
     list-style: none;
 }
 
-h1, h2 {
+/* h1 {
+    font-size: 20px;
     color: #ff4500; 
-}
+} */
 
+.article-list-container h2 {
+    font-size: 30px;
+}
 p {
     color: black; 
     margin: 0;

@@ -3,7 +3,7 @@
  
 
 
-ul, li, a, button {
+.nav_bar ul, li, a, button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -27,12 +27,13 @@ ul, li, a, button {
   margin-left: 100px;
   padding: 0;
   overflow: hidden;
-  background-color: #FCC59B;
+  /* background-color: #FCC59B; */
 }
 
 .nav_bar {
-  align-items: flex-end;
-  background-color: rgb(236, 107, 38); 
+  margin-top: 20px;
+  align-items: flex-start;
+  background-color: #FCC59B; 
   display: flex;
   direction: row;
   height: 80px;

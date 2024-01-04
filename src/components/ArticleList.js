@@ -20,7 +20,6 @@ const ArticleList = () => {
   
     return (
       <div className="article-list-container">
-        <h1>Featured Articles</h1>
         <ul>
           {articles.map(article => (
             <li key={article.id} className="article-item">
