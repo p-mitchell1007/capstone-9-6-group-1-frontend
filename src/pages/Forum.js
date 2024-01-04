@@ -7,7 +7,7 @@ import './Forum.css'
 //import { Link } from "react-router-dom";
 
 // Logo2 is being used as the background image on the Forum page
-import Logo2 from "../assets/logo2.png";
+// import Logo2 from "../assets/logo2.png";
 
 const API = process.env.REACT_APP_API_URL;
 // const PORT = process.env.PORT
@@ -26,8 +26,8 @@ export default function Forum () {
   return (
     <div className='forum'>
       <div>
-        <h1 className='forum-header'>Forum</h1>
-        <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/>
+        {/* <h1 className='forum-header'>Forum</h1> */}
+        {/* <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/> */}
       </div>
       <div className="main-content">
         <div className="aside">

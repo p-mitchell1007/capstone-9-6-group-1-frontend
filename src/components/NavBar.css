@@ -1,12 +1,38 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+ 
 
-/* Updated Styles for a Modern and Compact Navigation Bar */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-body {
-    margin: 0;
+ul, li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color:black;
+  text-decoration: none;
 }
+
+
+ .logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+
+.nav_bar ul {
+  list-style-type: none;
+  margin-left: 100px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCC59B;
+}
+
 .nav_bar {
-  background-color: #FF8C42; /* Adjusted orange color */
+  align-items: flex-end;
+  background-color: rgb(236, 107, 38); 
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -5,21 +5,11 @@ import NavBar from "./components/NavBar.js";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Mission from "./Pages/Mission.js";
+import Articles from "./Pages/Articles.js"
 import Login from "./Pages/Login.js"
 import SignUp from "./Pages/SignUp.js"
 import Forum from "./Pages/Forum.js"
 import Home from './Pages/Home.js';
-
-const NavBarWrapper = () => {
-  const location = useLocation();
-  
-  // Don't render the navigation bar on the login page or sign up page
-  if (location.pathname === '/' || location.pathname === '/signup' ) {
-    return null;
-  }
-
-  return <NavBar />;
-};
 function App() {
   return (
     <div className="App">
