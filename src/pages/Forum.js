@@ -11,13 +11,16 @@ import Logo2 from "../assets/logo4.png";
 const API = process.env.REACT_APP_API_URL;
 // const PORT = process.env.PORT
 
+let theID = 5;
 export default function Forum () {
   const [posts, setPosts] = useState([]);
+  const [userId, setUserId] = useState([]);
+  // const [postId, setPostId] = useState([1]);
   // const [genderIcon, setGenderIcon] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${API}/posts`)
+      .get(`${API}/forum/${userId}`)
       .then((response) => setPosts(response.data))
       .catch((e) => console.error("catch", e));
   }, []);
@@ -42,6 +45,9 @@ export default function Forum () {
               {posts.map((post, index) => {
                 return < PostIndex key={index} post={post} />; })
               }
+              {/* {posts.map((post, index) => {
+                return < PostIndex key={index} post={post} />; })
+              } */}
             </ul>
           </div>
         </div>
