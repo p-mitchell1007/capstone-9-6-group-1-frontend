@@ -113,8 +113,11 @@ export default function Forum () {
                       image
                     </span>  
                     <span>
-                      <p className='post-card-title'>{post.title}</p>
-                      <p className="post-card-content">{post.content}</p>
+                      <span className='post-card-title'>{post.title}</span>
+                      <span className="post-card-content">{post.content}</span>
+                    </span>
+                    <span>
+                      ...
                     </span>
                   </div>
                   <div className='post-card-comment-row'>
@@ -175,7 +178,24 @@ export default function Forum () {
 9. Feature: Delete Comments
 10. Hovering over thumbnail will show their name (and or image -- may be a future feature)
 
+let data = [ 
+  {'id':'1, info: 'a'}, 
+  {'id': 2, 'info': 'b'}, 
+  {'id': 3, info: 'c'}, 
+  {'id': 4, 'info': 'd'}, 
+  {'id': 5, 'info': 'e'}
+]; 
+let dataB = [
+  {'id':'1, info: 'able'}, 
+  {'id': 2, 'info': 'beta'}, 
+  {'id': 3, info: 'chi'}, 
+  {'id': 4, 'info': 'delta'}, 
+  {'id': 5, 'info': 'epsilon'}
+]; 
 
+let view = data.map((element) =>{dataB.map((datab) => {
+  (return 
 
+}
 * * * 
 */
