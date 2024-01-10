@@ -71,7 +71,19 @@ export default function Forum () {
   */
 
  // * * * * * * Testing Post * * * * * * *
-
+    // const getLoggedInUser = () => {
+      
+    // }
+    // const getPostCreatorInfo = (allForumPosts) => {
+    //   const postUserId = allForumPosts.map(post =>{
+    //     console.log('allForumPosts.map',post.userId)
+    //     post.userId
+    //   })
+    //   return allForumUsers.find((user) => {
+    //     user.id === postUserId
+    //   })
+    // }
+    
 
 
   return (
@@ -107,7 +119,7 @@ export default function Forum () {
             <div className='post-card-container'>
             <div className='post-card'>
                 {allForumPosts.map((post) => (
-                <div className='post-card-content-frame'>
+                <div className='post-card-content-frame' key={post.id}>
                   <div className='post-card-content-row'>
                     <span className='post-card-img'>
                       image
@@ -121,10 +133,17 @@ export default function Forum () {
                     </span>
                   </div>
                   <div className='post-card-comment-row'>
-                    {allForumComments.map((comment) => (
+                    {/* {allForumComments.map((comment) => (
                     <p className='post-card-comment'>{comment.content}</p>
-                   ))}
-
+                   ))} */}
+                    {allForumComments.map((comment) => {
+                      if (comment.post_id === post.id) {
+                        return (
+                          <span className='post-card-comment' key ={comment.id}>{comment.content}</span>
+                        )
+                      } 
+                      return null;
+                    })}
                   </div>
                 </div>
                 ))}
@@ -139,10 +158,7 @@ export default function Forum () {
                 </div>
 
               ))}
-              {relatedComments.map((comment) => (
-                <div><ShowPostComments/>{comment.content}</div>
-
-              ))}
+              
              
            
               {/* <ul className="post-actions">
