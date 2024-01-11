@@ -18,7 +18,7 @@ export default function Forum () {
   const [allForumUsers, setAllForumUsers] = useState([]); 
   const [allForumPosts, setAllForumPosts] = useState([]); 
   const [allForumComments, setAllForumComments] = useState([]); 
-
+  // const [postFilterStatus, setPostFilterStatus ] = useState(['post-filter-menu hide'])
   const [currentUser, setCurrentUser] = useState([]);
   // const [ loggedInUserID, setLoggedInUserID ] = useState([5])
   const [ selectedPosts, setSelectedPosts ] = useState([])
@@ -41,9 +41,23 @@ export default function Forum () {
       .catch((e) => console.error("catch", e));
     }, []);
     
-    console.log('allForumUsers!', allForumUsers)
-    console.log('allForumPost!!', allForumPosts)
-    console.log('allForumComments!!!', allForumComments)
+    // console.log('allForumUsers!', allForumUsers)
+    // console.log('allForumPost!!', allForumPosts)
+    // console.log('allForumComments!!!', allForumComments)
+    
+    const postMenuToggle = () => {
+      // console.log('* * * Entered postMenuToggle!! * * * ')
+      const postFilterMenu = document.getElementById('post-filter-menu')
+      // console.log('postFilterMenu', postFilterMenu.classList)
+      postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
+    }
+    const commentToggle = (event) => {
+      const clicked = event.target.id
+      // console.log('* * * Entered commentToggle!! * * * ')
+      const postFilterMenuItem = document.getElementById(clicked)
+      // console.log('postFilterMenuItem', postFilterMenuItem.classList)
+      postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
+    }
 
   return (
     <div className='forum'>
@@ -53,15 +67,15 @@ export default function Forum () {
         User Info
         </div>
 
-          <div className="post-detail">
-              <div>
-              {currentUser.map((user) => (
-                <li>remove later: {user.id} {user.fname} {user.lname}</li>
-              ))}
-              </div>
+        <div className="post-detail">
             <div>
-              <h3>Forum Posts</h3>
-            <div className='post-card-container'>
+            {currentUser.map((user) => (
+              <li>remove later: {user.id} {user.fname} {user.lname}</li>
+            ))}
+            </div>
+          <div>
+            <h3>Forum Posts</h3>
+          <div className='post-card-container'>
             <div className='post-card'>
                 {allForumPosts.map((post) => (
                 <div className='post-card-content-frame' key={post.id}>
@@ -69,58 +83,55 @@ export default function Forum () {
                     <span className='post-card-img'>
                       image
                     </span>  
-                    <span>
+                    <span className="post-item">
                       <span className='post-card-title'>{post.title}</span>
                       <span className="post-card-content">{post.content}</span>
                     </span>
-                    <span>
+                    <span className='post-filter' onClick={postMenuToggle}>
                       ...
-                      <span className='post-filter'>
-                        <ul>
-                          <li className="post-filter-item all-posts">All Posts</li>
-                          <li className="post-filter-item friends-posts">Friends</li>
-                          <li className="post-filter-item my-posts">My Posts</li>
+                      <span id="post-filter-menu" className='hide'>
+                        <ul >
+                          <li id="all-posts" onClick={commentToggle}>All Posts</li>
+                          <li id="friends-posts" onClick={commentToggle}>Friends</li>
+                          <li id="my-posts" onClick={commentToggle}>My Posts</li>
                         </ul>
                       </span>
                     </span>
                   </div>
-                  <div >
+                  <span className='post-card-comment-row '>
                     {allForumComments.map((comment) => {
                       if (comment.post_id === post.id) {
                         return (
-                          <div className='post-card-comment-row'> <span className='post-card-comment' key ={comment.id}>{comment.content}</span></div>
-                         
+                          <span className='post-card-comment' key ={comment.id}>
+                            {/* {comment.content} */}
+                          <ShowPostComments id = {comment.id} post_id={comment.post_id} content={comment.content} comment_made={comment.comment_made}/>
+                          </span>
                         )
                       } 
                       return null;
                     })}
-                  </div>
+                  </span>
                 </div>
                 ))}
             </div>
-                
-            </div>
-
-              {selectedPosts.map((post) => (
-                <div>
-                  <p>{post.title}</p>
-                  <p>{post.content}</p>
-                </div>
-
-              ))}
-              
-             
-           
-              
-            </div>
-            <div>
-
-            </div>
-            <div>
-          
-          
-            </div>
           </div>
+
+            {selectedPosts.map((post) => (
+              <div>
+                <p>{post.title}</p>
+                <p>{post.content}</p>
+              </div>
+
+            ))}
+            
+          </div>
+          <div>
+
+          </div>
+          <div>
+        
+          </div>
+        </div>
 
       </div>
     </div>

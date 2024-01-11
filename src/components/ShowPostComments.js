@@ -4,7 +4,8 @@ function ShowPostComments (props) {
 
   return (
     <div className="show-post-comments">
-      <span className="post-index-item">{props.content} </span>
+      {console.log(props)}
+      <span className="comment-item">id: {props.id} Response to post #{props.post_id}  Content:  {props.content}</span>
     </div>
   )
 }
