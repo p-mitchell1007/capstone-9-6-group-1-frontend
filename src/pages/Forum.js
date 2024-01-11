@@ -40,10 +40,7 @@ export default function Forum () {
       })
       .catch((e) => console.error("catch", e));
     }, []);
-    
-    // console.log('allForumUsers!', allForumUsers)
-    // console.log('allForumPost!!', allForumPosts)
-    // console.log('allForumComments!!!', allForumComments)
+  
     
     const postMenuToggle = () => {
       // console.log('* * * Entered postMenuToggle!! * * * ')
@@ -58,21 +55,27 @@ export default function Forum () {
       // console.log('postFilterMenuItem', postFilterMenuItem.classList)
       postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
     }
+    useEffect(() => {
+      setCurrentUser(1)
+    }, []);
 
   return (
     <div className='forum'>
       
       <div className="forum-content">
-        <div className="aside">
-        User Info
+        {allForumUsers.map((user) => {
+          if (user.id === currentUser) {
+            return (
+              <div>(remove later: UserId: {user.id}) Welcome {user.fname} {user.lname}</div>
+            )
+          } 
+          return null;
+        })}
+      <div>
+      
         </div>
 
         <div className="post-detail">
-            <div>
-            {currentUser.map((user) => (
-              <li>remove later: {user.id} {user.fname} {user.lname}</li>
-            ))}
-            </div>
           <div>
             <h3>Forum Posts</h3>
           <div className='post-card-container'>
