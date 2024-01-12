@@ -4,10 +4,13 @@ function ShowUserPosts (props) {
 
   return (
     <div className="show-user-post">
-      <span className="post-index-item">{props.posts.user_id} {props.posts.title} </span>
-      <span>
-
+      <span className="small">
+        (remove later: PostId: {props.id}) 
       </span>
+      <span>
+        {props.user_id} {props.title} {props.content}
+      </span>
+      
     </div>
   )
 }

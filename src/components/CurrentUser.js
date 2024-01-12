@@ -7,9 +7,10 @@ function CurrentUser (props) {
   return (
     <div className="logged-in-user">
       <span className='logged-in-user-img'>
-        <img src={defaultFemale} alt="default male image" />
+        (remove later: UserId: {props.id}) </span>
+      <span>
+        {props.fname} {props.lname}
       </span>
-      <span className="post-index-item">{props.post.user_id} {props.post.fname} {props.post.lname}</span>
     </div>
   )
 }
