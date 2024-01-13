@@ -1,32 +1,3 @@
 .post {
-  align-items: left;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  background-color: white;
 }
-div .post-detail-img img{
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  padding: 0;
-  margin-right: 5px;
-  width: 90px;
-  z-index: 7;
-}
-div .post-detail-img img:hover{
-  cursor: pointer;
-  transition: width 150px 2s;
-}
-.post-detail-content {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-.post-detail-content:first-child,
-.post-detail-content:nth-child(2),
-.post-detail-content:nth-child(3) {
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
