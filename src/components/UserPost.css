@@ -1,0 +1,77 @@
+.user-post{
+  background-color: white;
+  margin: 10px;
+  padding: 10px 40px;
+}
+
+.user-post__author {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: lightslategray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-post__author-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-post__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.user-post__comments {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.user-post__comment {
+  font-size: 14px;
+  margin: 10px 10px;
+  color: lightslategray;
+  padding: 10px 20px;
+  background-color: antiquewhite;
+}
+
+.user-post__comment-btn {
+  font-size: 16px;
+  margin: 10px 10px;
+  color: white;
+  padding: 10px 20px;
+  background-color: rgb(236, 108, 37);
+  border: none;
+  box-shadow: none;
+}
+
+.user-post__comment-btn:hover {
+  color: white;
+}
+
+.user-post__comment-form {
+  margin: 10px 10px;
+  padding: 10px 20px;
+  background-color: antiquewhite;
+}
+
+.user-post__comment-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.user-post__comment-form button {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(236, 108, 37);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 

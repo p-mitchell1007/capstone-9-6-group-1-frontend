@@ -1,4 +1,4 @@
-import defaultMale from "../assets/default-male.png"
+import defaultUser from "../assets/default-user.png"
 import defaultFemale from "../assets/default-female.png"
 import './CurrentUser.css'
 
