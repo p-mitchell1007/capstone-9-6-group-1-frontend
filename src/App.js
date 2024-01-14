@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './App.css';
 import NavBar from "./components/NavBar.js";
 // import Contact from "./Pages/Contact.js";
-import About from "./Pages/About.js";
+// import About from "./Pages/About.js";
 import Mission from "./Pages/Mission.js";
 import Login from "./Pages/Login.js"
 import SignUp from "./Pages/SignUp.js"
@@ -31,7 +31,7 @@ function App() {
           <Route path="/signup" element ={<SignUp />} />
           <Route path="/home" element ={<Home />} />
           {/* <Route path="/contact" element ={<Contact />} /> */}
-          <Route path="/about" element ={<About />} />
+          {/* <Route path="/about" element ={<About />} /> */}
           <Route path="/mission" element ={<Mission />} />
           <Route path="/forum" element ={<Forum />} />
 
