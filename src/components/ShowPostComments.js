@@ -3,7 +3,7 @@ import './ShowPostComments.css'
 function ShowPostComments (props) {
 
 const getMonthDay = (date) => {
-  const dateString = date;
+  // const dateString = date;
   const dateObject = new Date(date);
   const month = dateObject.getMonth() + 1;
   const day = dateObject.getDate();

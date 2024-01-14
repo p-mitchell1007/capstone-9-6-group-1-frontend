@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";  // Import axios
 import './Home.css';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
 const randomQuotesAPI = "https://zenquotes.io/api/random";
 const API_KEY = "AIzaSyAqR5BI53X5kWSzUXkH6yTfMMkDQd9yIgA"; // Replace with your YouTube API key

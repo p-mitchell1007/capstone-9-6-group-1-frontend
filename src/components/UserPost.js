@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios, { all } from "axios";
+import axios from "axios";
 
 import defaultUser from "../assets/default-user.png"
 
@@ -20,7 +20,7 @@ function UserPost ({post, allUsers}) {
         setComments(response.data)
       })
       .catch((e) => console.error("catch", e));
-    }, [])
+    }, [post.id])
 
   const formatDate = (date) => {
     const dateObj = new Date(date)

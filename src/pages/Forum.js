@@ -1,27 +1,27 @@
 
 import axios from "axios";
 import UserPost from "../components/UserPost.js";
-import ShowPostComments from "../components/ShowPostComments.js";
+// import ShowPostComments from "../components/ShowPostComments.js";
 import { useState, useEffect } from "react";
 
-import Post from "../components/Post.js";
+// import Post from "../components/Post.js";
 
 import './Forum.css'
 
 // Logo2 is being used as the background image on the Forum page
-import Logo2 from "../assets/logo4.png";
+// import Logo2 from "../assets/logo4.png";
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function Forum () {
-  const [posts, setPosts] = useState([]);
-  const [userId, setUserId] = useState([5]);
+  // const [posts, setPosts] = useState([]);
+  // const [userId, setUserId] = useState([5]);
 
   const [allForumUsers, setAllForumUsers] = useState([]); 
   const [allForumPosts, setAllForumPosts] = useState([]); 
-  const [allForumComments, setAllForumComments] = useState([]); 
-  const [currentUser, setCurrentUser] = useState([]);
-  const [ selectedPosts, setSelectedPosts ] = useState([])
+  // const [allForumComments, setAllForumComments] = useState([]); 
+  // const [currentUser, setCurrentUser] = useState([]);
+  // const [ selectedPosts, setSelectedPosts ] = useState([])
   // const [ relatedComments, setRelatedComments ] = useState([])
   // const [postFilterStatus, setPostFilterStatus ] = useState(['post-filter-menu hide'])
   // const [ loggedInUserID, setLoggedInUserID ] = useState([5])
@@ -43,16 +43,16 @@ export default function Forum () {
     }, []);
   
     
-    const postMenuToggle = () => {
-      const postFilterMenu = document.getElementById('post-filter-menu')
-      postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
-    }
+    // const postMenuToggle = () => {
+    //   const postFilterMenu = document.getElementById('post-filter-menu')
+    //   postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
+    // }
 
-    const commentToggle = (event) => {
-      const clicked = event.target.id
-      const postFilterMenuItem = document.getElementById(clicked)
-      postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
-    }
+    // const commentToggle = (event) => {
+    //   const clicked = event.target.id
+    //   const postFilterMenuItem = document.getElementById(clicked)
+    //   postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
+    // }
 
     // iterate through all posts and update the data with the user name
     const getUserNameForEachPost = (posts, users) => {
