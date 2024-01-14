@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import './App.css';
 import NavBar from "./components/NavBar.js";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
+import Contact from "./Pages/Contact.js";
+import About from "./Pages/About.js";
 import Mission from "./Pages/Mission.js";
 import Login from "./Pages/Login.js"
 import SignUp from "./Pages/SignUp.js"
@@ -19,11 +18,13 @@ const NavBarWrapper = () => {
 
   return <NavBar />;
 };
+
 function App() {
   return (
     <div className="App">
       <Router>
-      {/* <NavBarWrapper /> */}
+        
+      <NavBarWrapper /> 
       <main>
         <Routes>
           <Route path="/" element ={<Login />} />
