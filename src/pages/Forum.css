@@ -1,0 +1,20 @@
+.forum {
+    background-color: rgb(236, 108, 37);
+    text-align: left;
+    padding: 30px 0;
+  }
+  
+  .forum__container {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  
+  .forum__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 10px;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(236, 108, 37);
+    text-align: center;
+  }
