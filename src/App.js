@@ -2,19 +2,19 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Link } from 'react-router-dom';
 import './App.css';
 import NavBar from "./components/NavBar.js";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
-import Mission from "./Pages/Mission.js";
-import Articles from "./Pages/Articles.js"
-import Login from "./Pages/Login.js"
-import SignUp from "./Pages/SignUp.js"
-import Forum from "./Pages/Forum.js"
-import Home from './Pages/Home.js';
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Mission from "./pages/Mission.js";
+import Articles from "./pages/Articles.js"
+import Login from "./pages/Login.js"
+import SignUp from "./pages/SignUp.js"
+import Forum from "./pages/Forum.js"
+import Home from './pages/Home.js';
 function App() {
   return (
     <div className="App">
       <Router>
-      <NavBarWrapper />
+      {/* <NavBarWrapper /> */}
       <main>
         <Routes>
           <Route path="/" element ={<Login />} />

@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Logo2 from "../assets/logo2.png"
 import './Profile.css'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 const PORT = process.env.PORT
@@ -18,7 +18,7 @@ const PORT = process.env.PORT
 
   useEffect(() => {
     axios
-      .get(`${API}/profile/`)
+      .get(`${API}/profile/1`)
       // .then((response) => setUserProfile(response.data))
       .then((response) => console.log(response.data))
       .catch((e) => console.error("catch", e));

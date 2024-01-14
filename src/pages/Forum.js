@@ -1,68 +1,89 @@
 
 import axios from "axios";
-import Post from '../components/Post';
-import PostIndex from "../components/post-index";
+import UserPost from "../components/UserPost.js";
+import ShowPostComments from "../components/ShowPostComments.js";
 import { useState, useEffect } from "react";
+
+import Post from "../components/Post.js";
+
 import './Forum.css'
-//import { Link } from "react-router-dom";
 
 // Logo2 is being used as the background image on the Forum page
-// import Logo2 from "../assets/logo2.png";
+import Logo2 from "../assets/logo4.png";
 
 const API = process.env.REACT_APP_API_URL;
-// const PORT = process.env.PORT
 
 export default function Forum () {
   const [posts, setPosts] = useState([]);
-  // const [genderIcon, setGenderIcon] = useState([]);
+  const [userId, setUserId] = useState([5]);
 
+  const [allForumUsers, setAllForumUsers] = useState([]); 
+  const [allForumPosts, setAllForumPosts] = useState([]); 
+  const [allForumComments, setAllForumComments] = useState([]); 
+  const [currentUser, setCurrentUser] = useState([]);
+  const [ selectedPosts, setSelectedPosts ] = useState([])
+  // const [ relatedComments, setRelatedComments ] = useState([])
+  // const [postFilterStatus, setPostFilterStatus ] = useState(['post-filter-menu hide'])
+  // const [ loggedInUserID, setLoggedInUserID ] = useState([5])
+  // const [postId, setPostId] = useState([1]);
+  // const [genderIcon, setGenderIcon] = useState([]);
+  
+  
+  
   useEffect(() => {
     axios
-      .get(`${API}/posts`)
-      .then((response) => setPosts(response.data))
+      .get(`${API}/forum/`)
+      .then((response) => {
+
+        const posts = getUserNameForEachPost(response.data.allPosts, response.data.allUsers)
+        setAllForumPosts(posts)   
+        setAllForumUsers(response.data.allUsers)     
+      })
       .catch((e) => console.error("catch", e));
-  }, []);
+    }, []);
+  
+    
+    const postMenuToggle = () => {
+      const postFilterMenu = document.getElementById('post-filter-menu')
+      postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
+    }
+
+    const commentToggle = (event) => {
+      const clicked = event.target.id
+      const postFilterMenuItem = document.getElementById(clicked)
+      postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
+    }
+
+    // iterate through all posts and update the data with the user name
+    const getUserNameForEachPost = (posts, users) => {
+      return posts.map((post) => {
+        const user = users.find((user) => user.id === post.user_id)
+        return {
+          ...post,
+          user: `${user.fname} ${user.lname}`
+        }
+      })
+    }
+
+
+    // const filterPosts = (filter) => {
+      // 1. get current user
+      // 2. find posts related that user
+      // 3. find comments related to those posts
+      // 4. render posts and comments to page
+    // }
 
   return (
     <div className='forum'>
-      <div>
-        {/* <h1 className='forum-header'>Forum</h1> */}
-        {/* <img className = "logo2 nav-item"src ={Logo2} alt='logo pic'/> */}
-      </div>
-      <div className="main-content">
-        <div className="aside">
-          <div className='post-index-container'>
-            <h4>Post Index</h4>
-            <ul className="post-index-filter">
-              <li className='label'>Select:</li>
-              <li className="post-filter-item all-posts">All Posts</li>
-              <li className="post-filter-item friends-posts">Friends</li>
-              <li className="post-filter-item my-posts">My Posts</li>
-            </ul>
-            <ul className="post-index">
-              {posts.map((post, index) => {
-                return < PostIndex key={index} post={post} />; })
-              }
-            </ul>
-          </div>
+      <div className="forum__container">
+        <h3 className="forum__title">Forum Posts</h3>
+        <div className="forum__posts">
+          {allForumPosts.map((post) => (
+            <UserPost  post={post}  id={post.id} allUsers={allForumUsers}/>
+          ))}
         </div>
-        <div>
-          <div className="post-detail">
-              <h4>Post Detail</h4>
-            <ul className="post-actions">
-              <li className='label'>Select:</li>
-              <li className="post-actions-item all-posts">view</li>
-              <li className="post-actions-item friends-posts">New</li>
-              <li className="post-actions-item my-posts">Delete</li>
-            </ul>
-            <div>
-              {posts.map((post, index) => {
-              return <Post key={index} post={post} />;  })
-              }
-            </div>
-          </div>
-        </div>
-      </div>
+      </div> 
     </div>
   )
 }
+
