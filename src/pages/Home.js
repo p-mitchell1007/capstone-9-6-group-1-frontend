@@ -79,7 +79,7 @@ return (
   
         {/* Trending Videos Section */}
         <div className="trending-videos">
-          <h2>Trending Videos</h2>
+          <h2>Welcome to Reflections</h2>
           <div className="video-carousel">
             {videos.map((video) => (
              <div className="video-thumbnail">
