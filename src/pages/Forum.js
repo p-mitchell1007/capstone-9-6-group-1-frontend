@@ -43,16 +43,16 @@ export default function Forum () {
     }, []);
   
     
-    const postMenuToggle = () => {
-      const postFilterMenu = document.getElementById('post-filter-menu')
-      postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
-    }
+    // const postMenuToggle = () => {
+    //   const postFilterMenu = document.getElementById('post-filter-menu')
+    //   postFilterMenu.classList = postFilterMenu.classList.contains('hide') ? 'show' : 'hide'
+    // }
 
-    const commentToggle = (event) => {
-      const clicked = event.target.id
-      const postFilterMenuItem = document.getElementById(clicked)
-      postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
-    }
+    // const commentToggle = (event) => {
+    //   const clicked = event.target.id
+    //   const postFilterMenuItem = document.getElementById(clicked)
+    //   postFilterMenuItem.innerHTML = `Now showing ${postFilterMenuItem.id}`
+    // }
 
     // iterate through all posts and update the data with the user name
     const getUserNameForEachPost = (posts, users) => {
@@ -64,14 +64,6 @@ export default function Forum () {
         }
       })
     }
-
-
-    // const filterPosts = (filter) => {
-      // 1. get current user
-      // 2. find posts related that user
-      // 3. find comments related to those posts
-      // 4. render posts and comments to page
-    // }
 
   return (
     <div className='forum'>

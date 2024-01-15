@@ -42,9 +42,10 @@
 
 .user-post__comment-btn {
   font-size: 16px;
+  font-family: sans-serif;
   margin: 10px 10px;
   color: white;
-  padding: 10px 20px;
+  padding: 7px 20px;
   background-color: rgb(236, 108, 37);
   border: none;
   box-shadow: none;
@@ -52,6 +53,7 @@
 
 .user-post__comment-btn:hover {
   color: white;
+  font-weight: 700;
 }
 
 .user-post__comment-form {
@@ -75,3 +77,24 @@
   border-radius: 5px;
   cursor: pointer;
 } 
+
+.user-post__post-nav {
+  list-style: none;
+  display: flex;
+}
+.user-post__post-nav__item {
+  border-radius: 3px;
+  color: lightslategray;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 5px;
+  padding: 6px 5px;
+}
+
+.user-post__post-nav__item:hover {
+  background-color: rgb(236, 108, 37);
+  color: white;
+}

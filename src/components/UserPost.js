@@ -38,6 +38,7 @@ function UserPost ({post, allUsers}) {
 
   return (
     <div className="user-post">
+     
       <div className="user-post__author">
         <div style={{"display": "flex", "alignItems":"center"}}>
           <img 
@@ -47,6 +48,11 @@ function UserPost ({post, allUsers}) {
           />
           <span>Posted by: {post.user}</span>
         </div>
+        <ul className="user-post__post-nav">
+          <li className="user-post__post-nav__item">New Post</li>
+          <li className="user-post__post-nav__item">My Post</li>
+          <li className="user-post__post-nav__item">All Post</li>
+        </ul>
         <span>Posted on: {formatDate(post.post_made)}</span>
       </div>
       <div className='user-post__title'>
@@ -80,13 +86,13 @@ function UserPost ({post, allUsers}) {
             onClick={() => setShowCommentForm(!showCommentForm)}
             style={{"display": showCommentForm ? "none" : "block"}}
           >
-            Comment
+            New Comment
           </button>
         </div>
         <div className="user-post__comment-form" style={{"display": showCommentForm ? "block" : "none"}}>
           <form>
             <textarea className="user-post__comment-input" placeholder="Add a comment..."></textarea>
-            <button className="user-post__comment-btn">Comment</button>
+            <button className="user-post__comment-btn">Add Comment</button>
           </form>
         </div>
       </div>
