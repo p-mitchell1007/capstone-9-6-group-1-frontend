@@ -31,6 +31,11 @@
 }
 
 .random-quote p {
+  text-align: center;
+  font-family: Inika;
+  font-size: 20px;
+  font-weight: 1200px;
+  font-style: normal;
   margin-top: 25px;
   max-height: 1000px;
   overflow: auto;
