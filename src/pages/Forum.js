@@ -65,14 +65,6 @@ export default function Forum () {
       })
     }
 
-
-    // const filterPosts = (filter) => {
-      // 1. get current user
-      // 2. find posts related that user
-      // 3. find comments related to those posts
-      // 4. render posts and comments to page
-    // }
-
   return (
     <div className='forum'>
       <div className="forum__container">

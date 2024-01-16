@@ -75,7 +75,9 @@ function Login() {
 
           <div className="additional-text">
           <p>
-            Feeling overwhelmed postpartum? Need to talk to others who are going through the same thing?
+            Where new parents connect.
+          </p>
+          <p>
             Join the conversation.
           </p>
         </div>
