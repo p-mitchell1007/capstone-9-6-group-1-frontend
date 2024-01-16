@@ -1,21 +1,21 @@
 
-import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-import axios from "axios";  // Import axios
-import './Home.css';
-// import logo from '../assets/logo.png';
 
-const randomQuotesAPI = "https://zenquotes.io/api/random";
-const API_KEY = "AIzaSyAqR5BI53X5kWSzUXkH6yTfMMkDQd9yIgA"; // Replace with your YouTube API key
-const YOUTUBE_API_URL = "https://www.googleapis.com/youtube/v3/videos";
+// import { Link } from "react-router-dom";
+import logo from '../assets/logo.png';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import './Home.css';
+
+const randomQuotesAPI = "https://api.quotable.io/random";
+const POSTPARTUM_DEPRESSION_API_KEY = "70b9e2cab3fe4b1ea0bf6977264f5d99";
 
 export default function Home() {
-  const [videos, setVideos] = useState([]);
   const [randomQuote, setRandomQuote] = useState("");
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     fetchRandomQuote();
-    fetchTrendingVideos();
+    fetchArticles(); // Fetch articles here
   }, []);
 
   const fetchRandomQuote = async () => {
@@ -28,82 +28,67 @@ export default function Home() {
     }
   };
 
-  const fetchTrendingVideos = async () => {
-    try {
-      const response = await axios.get(YOUTUBE_API_URL, {
-        params: {
-          key: API_KEY,
-          part: "snippet",
-          chart: "mostPopular",
-          regionCode: "US", // You can change the region code as needed
-          videoCategoryId: "17", // Category ID for "Family" videos
-          maxResults: 1, // Number of videos to retrieve
-        },
-      });
+const fetchArticles = async () => {
+  try {
+    const response = await axios.get("https://newsapi.org/v2/everything", {
+      params: {
+        q: "postpartum depression",
+        apiKey: POSTPARTUM_DEPRESSION_API_KEY,
+      },
+    });
 
-      const videoItems = response.data.items;
-      const videoData = videoItems.map((item) => ({
-        id: item.id.videoId,
-        title: item.snippet.title,
-        description: item.snippet.description,
-        thumbnail: item.snippet.thumbnails.default.url,
-        author: item.snippet.channelTitle,
-      }));
+    const articleData = response.data.articles.map((article) => ({
+      title: article.title,
+      description: article.description,
+      url: article.url,
+    }));
 
-      setVideos(videoData);
-    } catch (error) {
-      console.error("Couldn't fetch trending videos:", error);
-    }
-  };
-  
-const [showFullDescriptions, setShowFullDescriptions] = useState({});
-
-const handleDescriptionToggle = (videoId) => {
-  setShowFullDescriptions((prev) => ({
-    ...prev,
-    [videoId]: !prev[videoId],
-  }));
+    setArticles(articleData);
+  } catch (error) {
+    console.error("Couldn't fetch articles:", error);
+  }
 };
 
-// Home component JSX
+
+
 return (
-    <div className="home">
-      <div className="content">
-        {/* Random Quote Section */}
-        <div className="random-quote">
-          <h4>Random Quote</h4>
-          <div className="quote">
-            <p>{randomQuote}</p>
-          </div>
+  <div className="home">
+    <div className="content">
+      {/* Random Quote Section */}
+      <div className="random-quote">
+        <h4>Daily Quotes</h4>
+        <div className="quote">
+          <p>{randomQuote}</p>
         </div>
-  
-        {/* Trending Videos Section */}
-        <div className="trending-videos">
-          <h2>Welcome to Reflections</h2>
-          <div className="video-carousel">
-            {videos.map((video) => (
-             <div className="video-thumbnail">
-             <iframe
-               title={video.title}
-               width="300"
-               height="200"
-               src={`https://www.youtube.com/embed/${video.id}`}
-               frameBorder="0"
-               allowFullScreen
-             ></iframe>
-             <p className="video-title">{video.title}</p>
-             <p className="video-description" onClick={() => handleDescriptionToggle(video.id)}>
-               {showFullDescriptions[video.id] ? video.description : `${video.description.slice(0, 100)}... See more`}
-             </p>
-             <p>{video.author}</p>
-           </div>
-            ))}
-          </div>
+      </div>
+
+      {/* Articles Section */}
+      <div className="related-articles">
+        <h2>
+          Trending Articles <span>on Postpartum Depression</span>
+        </h2>
+        <div className="article-grid">
+          {articles.slice(0, 4).map((article) => (
+            <div key={article.id} className="article">
+              {/* Logo */}
+              <img src="logo.png" alt="Your Logo" className="logo" />
+              <div className="article-content">
+                <h3>{article.title}</h3>
+                <p>{article.body}</p>
+                {/* Add your article link here */}
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  Read More
+                </a>
+              </div>
+              <hr />
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  );
-}  
+  </div>
+);
+}
 
 
 
