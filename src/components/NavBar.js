@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import './NavBar.css'
-import Logo from "../assets/logo5.png"
+import Logo from "../assets/logo.png"
 
 function NavBar() {
   return (
@@ -14,7 +14,7 @@ function NavBar() {
       <li> <a href ="/home"> Home</a></li>
       <li> <a href ="/forum"> Forum</a> </li>
       <li> <a href ="/about"> About </a> </li>
-      <li> <a href ="/mission"> Mission</a> </li>
+      {/* <li> <a href ="/mission"> Mission</a> </li> */}
       <li> <a href ="/contact"> Contact</a></li>
     </ul>
   </nav>

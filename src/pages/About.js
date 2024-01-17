@@ -5,47 +5,47 @@ import Phillip from "../assets/phillip.jpeg"
 import Raymond from "../assets/raymond.jpeg"
 function About (){
     return(
-        <div clssName="about">
-            <h1> About us</h1>
-            <p> An application that allows expecting/current parents and professional counselors 
-                to come together. It helps you connect with other expecting/current parents through 
-                a chat/forum, has addition resources for parent dealing with stress, postpartum depression, 
-                and other related issues that come with having a family. It also provides users with therapists 
-                to work with for effectively dealing with postpartum issues.
+        <div className="about">
+            <h1 className="about-title"> About Reflections</h1>
+            <p> Reflections is a lifeline for parents seeking connection and shared experiences. 
+            Join our community and discover the strength that comes from connecting with others who truly understand. 
+            Parenthood is a journey best traveled together, and Reflections is your companion on this incredible 
+            adventure. </p>
 
                 <section className="dev">
-                    <h1>Developers:🧑‍💻</h1>
-                        <ul>
-                            <div className="blanca">
-                                <img src={Blanca} alt="Blanca's Avatar" />
-                                    <a href="https://www.github.com/winterbelle">
-                                            <strong>Blanca Altamirano</strong>
-                                    </a>
-                            </div>
+                    <h1>Developers 👩🏼‍💻🧑‍💻</h1>
+                        <div className="developers">
+                        {/* <ul> */}
+                                <div className="blanca">
+                                    <img src={Blanca} alt="Blanca's Avatar" />
+                                        <a href="https://www.github.com/winterbelle">
+                                                <strong>Blanca Altamirano</strong>
+                                        </a>
+                                </div>
 
-                            <div>
-                                <img src={Monir} alt="Monir's Avatar" />
-                                    <a href="https://github.com/monir9h">
-                                            <strong>Monir Hossen</strong>
-                                    </a>
-                            </div>
+                                <div>
+                                    <img src={Monir} alt="Monir's Avatar" />
+                                        <a href="https://github.com/monir9h">
+                                                <strong>Monir Hossen</strong>
+                                        </a>
+                                </div>
 
-                            <div>
-                                <img src={Raymond} alt="Raymond's Avatar" />
-                                    <a href="https://github.com/raymondjohnson">
-                                            <strong>Raymond Johnson</strong>
-                                    </a>
-                            </div>
+                                <div>
+                                    <img src={Raymond} alt="Raymond's Avatar" />
+                                        <a href="https://github.com/raymondjohnson">
+                                                <strong>Raymond Johnson</strong>
+                                        </a>
+                                </div>
 
-                            <div>
-                                <img src={Phillip} alt="Phillip's Avatar" />
-                                    <a href="https://github.com/p-mitchell1007">
-                                            <strong>Phillip Mitchell</strong>
-                                    </a>
-                            </div>
-                        </ul>
+                                <div>
+                                    <img src={Phillip} alt="Phillip's Avatar" />
+                                        <a href="https://github.com/p-mitchell1007">
+                                                <strong>Phillip Mitchell</strong>
+                                        </a>
+                                </div>
+                        {/* </ul> */}
+                        </div>
                 </section>
-            </p>
         </div>
     )
 }
