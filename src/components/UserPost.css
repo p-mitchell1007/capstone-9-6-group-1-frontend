@@ -21,9 +21,13 @@
 }
 
 .user-post__title {
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.user-post__content {
+  font-size: 1.3em;
 }
 
 .user-post__comments {
@@ -35,19 +39,23 @@
 .user-post__comment {
   font-size: 14px;
   margin: 10px 10px;
-  color: lightslategray;
+  color: #2a2d2f;
   padding: 10px 20px;
-  background-color: rgb(239, 239, 239)
+  background-color: rgb(239, 239, 239);
+  border-radius: 5px;
 }
 
 .user-post__comment-btn {
-  font-size: 16px;
-  margin: 10px 10px;
+  margin-left: 62%;
   color: white;
-  padding: 10px 20px;
   background-color: rgb(236, 108, 37);
   border: none;
   box-shadow: none;
+  width: 38%;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 .user-post__comment-btn:hover {
@@ -58,23 +66,35 @@
   margin: 10px 10px;
   padding: 10px 20px;
   background-color: antiquewhite;
+  width: 98%;
+
 }
 
 .user-post__comment-form textarea {
   width: 100%;
   height: 100px;
   margin-bottom: 10px;
+  padding: 15px;
+  font-size: 1.1em;
+  border: orange 1px solid;
+  border-radius: 5px;
 }
 
-.user-post__comment-form button {
-  width: 100%;
-  height: 30px;
+.user-post__comment-form textarea:focus {
+  border: orange 3px solid;
+  outline: none;
+}
+
+/* .user-post__comment-form button { */
+  /* width: 100%;
+  height: 40px;
+  line-height: 40px;
   background-color: rgb(236, 108, 37);
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-} 
+  cursor: pointer; */
+/* }  */
 
 .user-post__post-nav {
   list-style: none;
