@@ -3,6 +3,7 @@
   font-family: sans-serif;
   font-size: 16px;
   margin-top: 10px;
+  flex-direction: column;
 }
 
 .content {
@@ -21,6 +22,7 @@
   padding: 10px;
   overflow: hidden;
   margin-top: 141px;
+  width: 100%;
 }
 
 .random-quote h4 {
@@ -29,6 +31,8 @@
   font-size: 16px; /* Adjust author font size as needed */
   margin-bottom: 5px;
 }
+
+
 
 .random-quote p {
   text-align: center;
@@ -194,4 +198,26 @@ iframe {
   color: #0088a9;
   text-decoration: underline;
   text-decoration-color: #0088a9;
+}
+
+@media screen and (min-width: 1680px) {
+  /* Adjust styles for screens with a minimum width of 768 pixels */
+  .content {
+    flex-direction: row; /* Change back to row on larger screens */
+  }
+
+  .random-quote {
+    width: 30%; /* Adjust width for larger screens */
+  }
+
+  .related-articles {
+    width: 70%; /* Adjust width for larger screens */
+    margin-left: 20px; /* Add left margin on larger screens */
+    margin-top: 40px; /* Adjust top margin for larger screens */
+    margin-right: 45px; /* Add right margin on larger screens */
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

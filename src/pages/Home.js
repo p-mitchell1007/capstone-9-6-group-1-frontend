@@ -49,8 +49,6 @@ const fetchArticles = async () => {
   }
 };
 
-
-
 return (
   <div className="home">
     <div className="CTA">
