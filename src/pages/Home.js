@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import logo from '../assets/logo.png';
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YoutubeEmbed from '../components/PPDVideo';
@@ -76,7 +75,7 @@ return (
         <div className="article-grid">
           {articles.slice(0, 4).map((article) => (
             <div  key={article.id} className="article">
-              <img className="article__img" src={PPD2} />
+              <img className="article__img" src={PPD2} alt="postpartum"/>
                 <h4>{article.title}</h4>
                 <p>{article.body}</p>
                 <p>
