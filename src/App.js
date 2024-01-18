@@ -7,6 +7,7 @@ import Login from "./pages/Login.js"
 import SignUp from "./pages/SignUp.js"
 import Forum from "./pages/Forum.js"
 import Home from './pages/Home.js';
+import Footer from './components/footer.js';
 
 const NavBarWrapper = () => {
   const location = useLocation();
@@ -32,10 +33,10 @@ function App() {
           <Route path="/contact" element ={<Contact />} />
           <Route path="/about" element ={<About />} />
           <Route path="/forum" element ={<Forum />} />
-
         </Routes>
       </main>
       </Router>
+      <Footer />
     </div>
   );
 }

@@ -59,6 +59,10 @@ body {
     font-family: Inter;
 }
 
+.contact {
+    margin-bottom: 254px;
+}
+
 @media (max-width: 600px) {
     .contact-form {
         padding: 20px;
