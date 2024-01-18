@@ -130,12 +130,12 @@
   width: 70%;
 }
 
-.logo {
+/* .logo {
   width: 52px; 
   height: 50px; 
   background: url('../assets/logo.png') lightgray 50% / cover no-repeat ;
   margin-right: 10px; 
-}
+} */
 
 * {
   box-sizing: border-box;
