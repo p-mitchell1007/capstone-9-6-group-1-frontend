@@ -2,20 +2,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YoutubeEmbed from '../components/PPDVideo';
+import articles from "../components/ArticleData";
 
 import PPD2 from '../assets/PPD 2.png'
 import './Home.css';
 
 const randomQuotesAPI = "https://api.quotable.io/random";
-const POSTPARTUM_DEPRESSION_API_KEY = "70b9e2cab3fe4b1ea0bf6977264f5d99";
 
 export default function Home() {
   const [randomQuote, setRandomQuote] = useState("");
-  const [articles, setArticles] = useState([]);
+
 
   useEffect(() => {
     fetchRandomQuote();
-    fetchArticles(); // Fetch articles here
   }, []);
 
   const fetchRandomQuote = async () => {
@@ -27,27 +26,6 @@ export default function Home() {
       console.error("Something went wrong when fetching random quotes:", error);
     }
   };
-
-const fetchArticles = async () => {
-  try {
-    const response = await axios.get("https://newsapi.org/v2/everything", {
-      params: {
-        q: "postpartum depression",
-        apiKey: POSTPARTUM_DEPRESSION_API_KEY,
-      },
-    });
-
-    const articleData = response.data.articles.slice(0,3).map((article) => ({
-      title: article.title.slice(0, 120) + '...',
-      description: article.description,
-      url: article.url,
-    }));
-
-    setArticles(articleData);
-  } catch (error) {
-    console.error("Couldn't fetch articles:", error);
-  }
-};
 
 return (
   <div className="home">
@@ -77,7 +55,9 @@ return (
                 <h4>{article.title}</h4>
                 <p>{article.body}</p>
                 <p>
-                  Read More
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
                 </p>
             </div>
           ))}
@@ -89,6 +69,7 @@ return (
   </div>
 );
 }
+
 
 
 
