@@ -1,5 +1,5 @@
 .forum {
-    background-color: rgb(236, 108, 37);
+    background-color: white;
     text-align: left;
     padding: 30px 0;
   }
@@ -13,8 +13,8 @@
     font-size: 36px;
     font-weight: bold;
     margin: 10px 10px;
-    color: white;
+    color: rgb(236, 108, 37);
     padding: 10px 20px;
-    background-color: rgb(236, 108, 37);
+    background-color: white;
     text-align: center;
   }

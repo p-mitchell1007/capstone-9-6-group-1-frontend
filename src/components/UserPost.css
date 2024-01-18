@@ -1,5 +1,5 @@
 .user-post{
-  background-color: white;
+  background-color: #FDE2CD;
   margin: 10px;
   padding: 10px 40px;
 }
@@ -37,15 +37,14 @@
   margin: 10px 10px;
   color: lightslategray;
   padding: 10px 20px;
-  background-color: antiquewhite;
+  background-color: rgb(239, 239, 239)
 }
 
 .user-post__comment-btn {
   font-size: 16px;
-  font-family: sans-serif;
   margin: 10px 10px;
   color: white;
-  padding: 7px 20px;
+  padding: 10px 20px;
   background-color: rgb(236, 108, 37);
   border: none;
   box-shadow: none;
@@ -53,7 +52,6 @@
 
 .user-post__comment-btn:hover {
   color: white;
-  font-weight: 700;
 }
 
 .user-post__comment-form {
@@ -82,6 +80,7 @@
   list-style: none;
   display: flex;
 }
+
 .user-post__post-nav__item {
   border-radius: 3px;
   color: lightslategray;

@@ -9,6 +9,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin-top: 70px;
 }
 
 label {
@@ -62,9 +63,10 @@ button {
 .image-containers {
   position: absolute;
   top: 50%;
-  right: 120px; 
+  right: 75px; 
   transform: translate(0%, -50%);
   width: max-content;
+  /* border: 3px solid black; */
 }
 
 .image-container .background-overlay {
@@ -103,18 +105,22 @@ button {
   }
 
   .social-logos img {
-    width: 50px; 
-    height: 50px; 
+    width: 35px; 
+    height: 35px; 
     flex-shrink: 0;
-    margin-left: 10px; 
+    margin-left: 20px; 
     cursor: pointer;
     border-radius: 50%; 
+  }
+
+  .social-logos :hover {
+    transform: scale(1.5);
   }
 }
 
 .additional-text {
-  margin-top: 20px;
-  text-align: right;
+  margin-top: 40px;
+  margin-left: -40px;
 }
 
 .additional-text p {
