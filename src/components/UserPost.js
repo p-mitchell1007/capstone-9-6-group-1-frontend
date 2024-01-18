@@ -17,6 +17,7 @@ function UserPost ({post, allUsers}) {
     axios
       .get(`${API}/comments/${post.id}`)
       .then((response) => {
+        console.log(response.data)
         setComments(response.data)
       })
       .catch((e) => console.error("catch", e));
@@ -29,6 +30,24 @@ function UserPost ({post, allUsers}) {
     const year = dateObj.getFullYear()
     const formattedDate = `${month}/${day}/${year}`
     return formattedDate
+  }
+
+  const addComment = (event) => {
+    event.preventDefault()
+    const commentContent = event.target.previousSibling.value
+    const comment = {
+      user_id: 1,
+      content: commentContent, 
+      comment_made: new Date()
+    }
+    axios
+      .post(`${API}/comments/${post.id}`, comment)
+      .then((response) => {
+        setComments([...comments, response.data])
+        setShowCommentForm(false)
+        event.target.previousSibling.value = "";
+      })
+      .catch((e) => console.error("catch", e));
   }
 
   for(const comment of comments) {
@@ -48,11 +67,11 @@ function UserPost ({post, allUsers}) {
           />
           <span>Posted by: {post.user}</span>
         </div>
-        <ul className="user-post__post-nav">
+        {/* <ul className="user-post__post-nav">
           <li className="user-post__post-nav__item">New Post</li>
           <li className="user-post__post-nav__item">My Post</li>
           <li className="user-post__post-nav__item">All Post</li>
-        </ul>
+        </ul> */}
         <span>Posted on: {formatDate(post.post_made)}</span>
       </div>
       <div className='user-post__title'>
@@ -89,10 +108,10 @@ function UserPost ({post, allUsers}) {
             New Comment
           </button>
         </div>
-        <div className="user-post__comment-form" style={{"display": showCommentForm ? "block" : "none"}}>
-          <form>
+        <div style={{"display": showCommentForm ? "block" : "none"}}>
+          <form className="user-post__comment-form">
             <textarea className="user-post__comment-input" placeholder="Add a comment..."></textarea>
-            <button className="user-post__comment-btn">Add Comment</button>
+            <button className="user-post__comment-btn" onClick={addComment}>Add Comment</button>
           </form>
         </div>
       </div>
