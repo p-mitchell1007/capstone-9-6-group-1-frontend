@@ -3,7 +3,6 @@ import './App.css';
 import NavBar from "./components/NavBar.js";
 import Contact from "./pages/Contact.js";
 import About from "./pages/About.js";
-import Mission from "./pages/Mission.js";
 import Login from "./pages/Login.js"
 import SignUp from "./pages/SignUp.js"
 import Forum from "./pages/Forum.js"
@@ -32,7 +31,6 @@ function App() {
           <Route path="/home" element ={<Home />} />
           <Route path="/contact" element ={<Contact />} />
           <Route path="/about" element ={<About />} />
-          <Route path="/mission" element ={<Mission />} />
           <Route path="/forum" element ={<Forum />} />
 
         </Routes>

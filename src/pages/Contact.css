@@ -1,32 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-/* * {
-    font-family: "Montserrat", sans-serif;
-     font-size: 16px; 
-} */
-
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    padding-left: 25%;
-    padding-right: 25%;
-}
-
-.submit-button {
-    padding: 9px 5px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3 s ease 0s;
-    margin: 10px;
-    padding-left: auto;
-    padding-right: auto;
-    background-color: rgb(236, 107, 38); 
-  
-  } 
-
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -39,41 +11,52 @@ body {
     font-size: 16px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
+.page_title {
+    margin-top: 40px;
+    font-family: Hammersmith One;
+    font-size: 30px;
 }
 
-label {
+.Ref {
+    font-family: Hammersmith One;
+    font-size: 30px;
+    color: #E36506;
+}
+
+.contact {
+    margin-top: 30px;
+    background-color: #FCC59B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    padding: 5%;
+    margin-left: 400px;
+    margin-right: 400px;
+
+}
+
+.contact a {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.contact a :hover {
+    color: #0088a9;
+    text-decoration-color: #0088a9;
+}
+
+.contact h6 {
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.contact p strong {
     font-weight: bold;
-    margin-bottom: 12px; /* Increased margin for better spacing */
-    color: #333;
+    font-size: 18px;
+    font-family: Inter;
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 12px; /* Increased padding for better spacing */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px; /* Increased margin for better spacing */
-}
-
-.submit-button {
-    padding: 15px 25px; /* Increased padding for better spacing */
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: #FF8C42;
-    color: white;
-    font-weight: bold;
-}
-
-.submit-button:hover {
-    background-color: #E36506;
+.contact p {
+    font-size: 18px;
+    font-family: Inter;
 }
 
 @media (max-width: 600px) {
@@ -81,3 +64,5 @@ textarea {
         padding: 20px;
     }
 }
+
+
