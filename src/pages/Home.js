@@ -73,10 +73,9 @@ return (
               <div className="article-content">
                 <h3>{article.title}</h3>
                 <p>{article.body}</p>
-                {/* Add your article link here */}
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <p>
                   Read More
-                </a>
+                </p>
               </div>
               <hr />
             </div>
